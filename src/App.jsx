@@ -1,36 +1,10 @@
 import React from "react";
 
-const logoUrl =
-  "https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-1/641647855_26096077396692550_6678137986820538567_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1d2534&_nc_ohc=D6Lh9KnFpSkQ7kNvwEm97rd&_nc_oc=AdqmooZbKail-R3BYTMrPL3AUpKkixwKJ4CL_BFg4MBCxs9wp4YdquegDYzKyUXrGtw&_nc_zt=24&_nc_ht=scontent.faep9-2.fna&_nc_gid=5_sqm7OJdF_4wzIvxoduRQ&_nc_ss=7a389&oh=00_AfxRPIDhchdN1ovuDcVjfceXV6sJH0Ows9WIkl7Zoxeu-w&oe=69D1CB8E";
-
-const productos = [
-  {
-    nombre: "Sillon modular premium",
-    imagen:
-      "https://scontent.faep9-1.fna.fbcdn.net/v/t39.30808-6/657695910_26421000044200282_1474389615012932958_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=tJtO1bi4v3MQ7kNvwEM5tKr&_nc_oc=AdpCsFUAtn3ZXGtPPXI1qRv8-exR_F9y-OsPK_4yyd_4IajYhFXH6d9XtZgoWhiQFqU&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=VYoluwpcxCL15ioW6AD23g&_nc_ss=7a389&oh=00_AfyorfIVXfXLytPw5tgDH48ehuEqb4V7BMKpA5o2ocEl8Q&oe=69D1A6E3",
-  },
-  {
-    nombre: "Juego de living elegante",
-    imagen:
-      "https://scontent.faep9-1.fna.fbcdn.net/v/t39.30808-6/656359762_26380917831541837_5944338548085869924_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Jh-UPbedy9YQ7kNvwENfxmy&_nc_oc=AdoNpfoCLtogf9ieCK0LxfOgkgS_phlywz0gYfSkwDjxOVIrPwawyRK1WzHvSA5zgdo&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=6Mwnm5T7OG9S9CkeR7g_lA&_nc_ss=7a389&oh=00_AfxPPMkiEtPqyKo_bEcj2oY6Qc5Qzykx3EZKAWPXpfNJhw&oe=69D1D7D5",
-  },
-  {
-    nombre: "Sillon clasico tapizado",
-    imagen:
-      "https://scontent.faep9-1.fna.fbcdn.net/v/t39.30808-6/655159405_26342759118691042_470594644160649769_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=AV6HfcvN5-oQ7kNvwEiq2NG&_nc_oc=AdpowXgMBwpDA0BwkOMejm_0jlZV5q0b8ebYNj-YUM674FW52z1CiTTLuQKB_4PddSc&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=bQlRRHAcXvmUfnZ72y5ihQ&_nc_ss=7a389&oh=00_AfzwbU0c7pbKkbDYiZn44l62quaFT60fxhBziGydhHvQBQ&oe=69D1C038",
-  },
-  {
-    nombre: "Modelo moderno a medida",
-    imagen:
-      "https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/649113706_26217312651235690_3877695776735736464_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=slNvJDb5qSUQ7kNvwFL-_e5&_nc_oc=AdqhYqduUhfeu0jtL2CDQSvzDGxm9djzeYJkZWE3Po5MR1b5yY2valS9ZAoQQoS6y5A&_nc_zt=23&_nc_ht=scontent.faep9-2.fna&_nc_gid=vv-Ap6yAJAmeBTOwo7Qu1g&_nc_ss=7a389&oh=00_AfysPN8A8Le7MnS4CCUOO4ThF5xYBtGTtCxCPBOyz0TFtw&oe=69D1B8BB",
-  },
-];
-
-const whatsappNumero = "59898851684";
+const WHATSAPP_NUMERO = "59891490081";
 const whatsappTexto = encodeURIComponent(
-  "Hola, quiero consultar por los productos de Sillones Salto."
+  "Hola Nicolas, quiero consultarte por un remate / servicios."
 );
-const whatsappLink = `https://wa.me/${whatsappNumero}?text=${whatsappTexto}`;
+const whatsappLink = `https://wa.me/${WHATSAPP_NUMERO}?text=${whatsappTexto}`;
 
 function App() {
   return (
@@ -38,11 +12,14 @@ function App() {
       <header className="header">
         <div className="contenedor barra">
           <a href="#inicio" className="marca">
-            <img src={logoUrl} alt="Logo Sillones Salto" />
-            <strong>Sillones Salto</strong>
+            <img src="/logo-nm.png" alt="Logo Nicolas Margall" width="56" height="56" />
+            <div className="marca-texto">
+              <strong>Nicolas Margall</strong>
+              <span>Rematador · Operador inmobiliario</span>
+            </div>
           </a>
-          <nav>
-            <a href="#productos">Nuestros productos</a>
+          <nav aria-label="Secciones">
+            <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
           </nav>
         </div>
@@ -50,54 +27,99 @@ function App() {
 
       <main id="inicio">
         <section className="hero">
-          <div className="contenedor hero-grid">
-            <div>
-              <h1>Muebles con estilo, confort y calidad</h1>
-              <p>
-                En Sillones Salto te ofrecemos piezas unicas para transformar tu
-                hogar. Disenamos y vendemos muebles para living y espacios
-                modernos.
-              </p>
-              <a className="btn" href={whatsappLink} target="_blank" rel="noreferrer">
-                Pedir por WhatsApp
-              </a>
+          <div className="contenedor hero-inner">
+            <div className="hero-logo-wrap">
+              <img
+                className="hero-logo"
+                src="/logo-nm.png"
+                alt=""
+                width="160"
+                height="160"
+                decoding="async"
+              />
             </div>
-            <div className="hero-card">
-              <h3>Atencion personalizada</h3>
-              <p>
-                Escribinos al <strong>098851684</strong> y te ayudamos a elegir
-                el modelo ideal.
-              </p>
+            <h1>Nicolas Margall</h1>
+            <p className="hero-sub">Rematador y operador inmobiliario en Salto, Uruguay.</p>
+            <p className="hero-lead">
+              Asesoramiento en remates judiciales y extrajudiciales, bienes raíces y gestión
+              inmobiliaria. Escribime por WhatsApp para una consulta directa.
+            </p>
+            <div className="hero-cta">
+              <a className="btn btn-wa" href={whatsappLink} target="_blank" rel="noreferrer">
+                Escribir por WhatsApp
+              </a>
+              <a className="btn btn-ghost" href="mailto:margallwestonnicolas@gmail.com">
+                Enviar correo
+              </a>
             </div>
           </div>
         </section>
 
-        <section id="productos" className="seccion">
+        <section id="servicios" className="seccion">
           <div className="contenedor">
-            <h2>Nuestros productos</h2>
-            <div className="grilla-productos">
-              {productos.map((producto) => (
-                <article className="producto" key={producto.imagen}>
-                  <img src={producto.imagen} alt={producto.nombre} loading="lazy" />
-                  <h4>{producto.nombre}</h4>
-                </article>
-              ))}
-            </div>
+            <h2>En qué puedo ayudarte</h2>
+            <ul className="lista-servicios">
+              <li>Remates judiciales y extrajudiciales</li>
+              <li>Operaciones y asesoramiento inmobiliario</li>
+              <li>Valoración y comercialización de bienes</li>
+              <li>Atención personalizada en Salto y zona</li>
+            </ul>
           </div>
         </section>
 
         <section id="contacto" className="seccion contacto">
           <div className="contenedor">
             <h2>Contacto</h2>
-            <p>
-              WhatsApp: <strong>098851684</strong>
-            </p>
-            <a className="btn" href={whatsappLink} target="_blank" rel="noreferrer">
-              Abrir chat ahora
+            <dl className="datos-contacto">
+              <div>
+                <dt>Ubicación</dt>
+                <dd>Salto, Uruguay</dd>
+              </div>
+              <div>
+                <dt>Correo</dt>
+                <dd>
+                  <a href="mailto:margallwestonnicolas@gmail.com">
+                    margallwestonnicolas@gmail.com
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt>Teléfono / WhatsApp</dt>
+                <dd>
+                  <a href={whatsappLink} target="_blank" rel="noreferrer">
+                    091 490 081
+                  </a>
+                </dd>
+              </div>
+            </dl>
+            <a className="btn btn-wa btn-block" href={whatsappLink} target="_blank" rel="noreferrer">
+              Abrir WhatsApp
             </a>
           </div>
         </section>
       </main>
+
+      <footer className="footer">
+        <div className="contenedor">
+          <p>© {new Date().getFullYear()} Nicolas Margall. Sitio informativo.</p>
+        </div>
+      </footer>
+
+      <a
+        className="fab-wa"
+        href={whatsappLink}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Escribir por WhatsApp"
+        title="WhatsApp"
+      >
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M16.003 3C9.385 3 4 8.154 4 14.545c0 2.33.672 4.505 1.838 6.345L4 29l8.41-2.208a12.9 12.9 0 006.593 1.79C25.62 28.582 31 23.428 31 17.037 31 8.154 22.624 3 16.003 3zm0 22.08c-1.89 0-3.74-.5-5.36-1.44l-.38-.225-4.94 1.295 1.32-4.81-.25-.4a9.86 9.86 0 01-1.51-5.26c0-5.45 4.63-9.88 10.32-9.88 5.69 0 10.32 4.43 10.32 9.88s-4.63 9.88-10.32 9.88zm5.69-7.14c-.31-.155-1.83-.9-2.11-1-.28-.1-.48-.155-.68.155-.2.31-.77 1-.94 1.2-.17.21-.34.24-.64.08-.31-.155-1.3-.48-2.48-1.53-.92-.82-1.54-1.83-1.72-2.14-.17-.31-.02-.48.13-.63.13-.13.31-.34.46-.51.15-.17.2-.29.31-.48.1-.2.05-.37-.02-.52-.08-.155-.68-1.64-.93-2.25-.24-.58-.49-.5-.68-.51l-.58-.01c-.2 0-.52.08-.79.37-.27.31-1.03 1.01-1.03 2.46 0 1.45 1.06 2.85 1.21 3.05.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.71.225 1.36.194 1.87.118.57-.085 1.83-.75 2.09-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.21-.59-.36z"
+          />
+        </svg>
+      </a>
     </>
   );
 }
